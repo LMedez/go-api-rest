@@ -3,7 +3,7 @@ package errors
 import (
 	"database/sql"
 	"fmt"
-	"github.com/LMedez/go-apirest/pkg/log"
+	"github.com/LMedez/go-api-rest/pkg/log"
 	routing "github.com/go-ozzo/ozzo-routing/v2"
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/stretchr/testify/assert"

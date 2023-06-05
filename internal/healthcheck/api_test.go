@@ -1,8 +1,8 @@
 package healthcheck
 
 import (
-	"github.com/LMedez/go-apirest/internal/test"
-	"github.com/LMedez/go-apirest/pkg/log"
+	"github.com/LMedez/go-api-rest/internal/test"
+	"github.com/LMedez/go-api-rest/pkg/log"
 	"net/http"
 	"testing"
 )

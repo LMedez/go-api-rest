@@ -6,6 +6,7 @@ import (
 	firebase "firebase.google.com/go"
 	"flag"
 	"fmt"
+	"github.com/LMedez/go-api-rest/internal/album"
 	"github.com/LMedez/go-api-rest/internal/auth"
 	"github.com/LMedez/go-api-rest/internal/config"
 	"github.com/LMedez/go-api-rest/internal/errors"
@@ -40,7 +41,7 @@ func main() {
 	}
 
 	// connect to the firestore db
-	opt := option.WithCredentialsFile("../go-apirest-firebase-adminsdk-mxs14-31cbb0f8a9.json")
+	opt := option.WithCredentialsFile(cfg.GoogleServices)
 	ctx := context.Background()
 	firebaseApp, err := firebase.NewApp(ctx, nil, opt)
 	firestoreClient, err := firebaseApp.Firestore(ctx)
@@ -80,12 +81,12 @@ func buildHandler(logger log.Logger, firestoreClient *firestore.Client, cfg *con
 
 	rg := router.Group("/v1")
 
-	//authHandler := auth.Handler(cfg.JWTSigningKey)
+	authHandler := auth.Handler(cfg.JWTSigningKey)
 
-	/*album.RegisterHandlers(rg.Group(""),
+	album.RegisterHandlers(rg.Group(""),
 		album.NewService(album.NewRepository(firestoreClient, logger), logger),
 		authHandler, logger,
-	)*/
+	)
 
 	auth.RegisterHandlers(rg.Group(""),
 		auth.NewService(cfg.JWTSigningKey, cfg.JWTExpiration, logger),

@@ -1,8 +1,8 @@
 package auth
 
 import (
-	"github.com/LMedez/go-apirest/internal/errors"
-	"github.com/LMedez/go-apirest/pkg/log"
+	"github.com/LMedez/go-api-rest/internal/errors"
+	"github.com/LMedez/go-api-rest/pkg/log"
 	routing "github.com/go-ozzo/ozzo-routing/v2"
 )
 

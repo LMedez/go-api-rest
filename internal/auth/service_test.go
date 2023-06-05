@@ -2,9 +2,9 @@ package auth
 
 import (
 	"context"
-	"github.com/LMedez/go-apirest/internal/entity"
-	"github.com/LMedez/go-apirest/internal/errors"
-	"github.com/LMedez/go-apirest/pkg/log"
+	"github.com/LMedez/go-api-rest/internal/entity"
+	"github.com/LMedez/go-api-rest/internal/errors"
+	"github.com/LMedez/go-api-rest/pkg/log"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

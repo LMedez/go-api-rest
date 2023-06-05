@@ -1,7 +1,7 @@
 package accesslog
 
 import (
-	"github.com/LMedez/go-apirest/pkg/log"
+	"github.com/LMedez/go-api-rest/pkg/log"
 	routing "github.com/go-ozzo/ozzo-routing/v2"
 	"github.com/stretchr/testify/assert"
 	"net/http"
